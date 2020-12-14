@@ -1,0 +1,28 @@
+/*-----------------------------------------
+# Forms: Common
+-----------------------------------------*/
+input.form-control,
+textarea.form-control {
+  border: 1px solid #ddd;
+  border-radius: 0;
+  color: $black;
+  line-height: 1.4em;
+  padding: 20px;
+  width: 100%;
+  font-size: 14px;
+  background: #fff;
+}
+
+/*-----------------------------------------
+# Forms: Contact Form 7
+-----------------------------------------*/
+.wpcf7-form-control-wrap {
+  margin-bottom: 15px;
+  display: block;
+}
+
+.wpcf7-not-valid-tip {
+  text-align: left;
+  font-size: 0.9em;
+  font-weight: 100;
+}

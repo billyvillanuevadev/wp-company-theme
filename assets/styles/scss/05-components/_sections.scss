@@ -1,0 +1,268 @@
+/*-----------------------------------------
+# Section
+-----------------------------------------*/
+section {
+  &:not(.no-padding) {
+    padding-top: $section-padding;
+    padding-bottom: $section-padding;
+  }
+
+  body:not(.home) & {
+    padding-top: $section-inside;
+    padding-bottom: $section-inside;
+  }
+}
+
+/*-----------------------------------------
+# Section: Common
+-----------------------------------------*/
+.content {
+  .blog-title {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-weight: 600;
+    font-size: 26px;
+  }
+  img {
+    max-width: 100%;
+    height: auto !important;
+  }
+}
+
+/*-----------------------------------------
+# Section: Services
+-----------------------------------------*/
+section.services {
+  .service-text {
+    padding: 3rem;
+  }
+
+  .service-img {
+    min-height: 30rem;
+    background-size: cover;
+  }
+
+  @media (min-width: $grid-breakpoint-md) {
+    .service-text {
+      padding: $section-padding;
+    }
+  }
+}
+
+/*-----------------------------------------
+# Section: Features
+-----------------------------------------*/
+section.features {
+  i {
+    font-size: $icon-size;
+    height: $icon-size;
+    width: $icon-size;
+    text-align: center;
+    display: inline-block;
+    margin: 0 auto 30px;
+    color: $blue-info; 
+  }
+}
+
+/*-----------------------------------------
+# Section: Testimonials
+-----------------------------------------*/
+section.testimonials {
+  .testimonial-item {
+    max-width: 18rem;
+
+    img {
+      max-width: 12rem;
+      box-shadow: 0px 5px 5px 0px $shadow-1;
+    }
+  }
+}
+
+/*-----------------------------------------
+# Section: Contact 2
+-----------------------------------------*/
+section.contact-2 {
+  .info-box {
+    color: $black;
+    text-align: center;
+    box-shadow: 0 0 30px $shadow-2;
+    padding: 30px 0 30px 0;
+
+    i {
+      font-size: 32px;
+      color: $blue-info;
+      border-radius: 50%;
+      padding: 8px;
+      border: 1px solid $blue-info;
+      margin-bottom: 15px;
+    }
+    
+    h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin: 10px 0;
+    }
+    
+    p {
+      padding: 0;
+      line-height: 24px;
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+  } 
+}
+
+/*-----------------------------------------
+# Section: Services 2
+-----------------------------------------*/
+section.services-2 {
+  .icon-box {
+    text-align: center;
+    border: 1px solid lighten($blue-info, 50%);
+    padding: 40px 30px;
+    transition: all ease-in-out 0.3s;
+    background: white;
+
+    .icon {
+      margin: 0 auto;
+      width: 70px;
+      height: 70px;
+      background: lighten($blue-info, 50%);
+      border-radius: 50%;
+      border: 1px solid #deebfd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      transition: ease-in-out 0.3s;
+
+      i {
+        color: $blue-info;
+        font-size: 38px;
+        transition: ease-in-out 0.3s;
+      }
+    }
+    
+    h4 {
+      font-weight: 700;
+      margin-bottom: 15px;
+      font-size: 24px;
+      transition: ease-in-out 0.3s;
+    }
+    
+    p {
+      line-height: 24px;
+      font-size: 1em;
+      margin-bottom: 0;
+    }
+    
+    &:hover {
+      border-color: $white;
+      box-shadow: 0px 0 25px 0 darken($shadow-2, 10%);
+    }
+    
+    &:hover h4, &:hover .icon i {
+      color: $blue-info;
+    }
+    
+    &:hover .icon {
+      border-color: $blue-info;
+    }
+  }
+}
+
+/*-----------------------------------------
+# Section: Blog
+-----------------------------------------*/
+section.blog {
+  .blog-article, .highlighted-article {
+    background-color: #fff;
+    margin-bottom: 48px;
+    transition: box-shadow .15s ease;
+
+    &, .entry-image {
+      position: relative;
+    }
+
+    time {
+      position: absolute;
+      right: 8px;
+      bottom: 8px;
+      background: rgba($black,.7);
+      font-size: .875rem;
+      color: #fff;
+      padding: 2px 4px;
+    }
+
+    .entry-title {
+      font-size: 20px;
+      a, a:hover {color: $black; text-decoration: none;}
+    }
+
+    .entry-summary {
+      a { color: $blue-info; }
+    }
+  }
+
+  .blog-article {
+    box-shadow: 0 2px 4px 0 darken($shadow-2, 20%);
+    &:hover {
+      box-shadow: 0 8px 10px 0 darken($shadow-2, 20%);
+    }
+
+    .entry-image img {
+      width: 100%;
+      height: 190px;
+      -o-object-fit: cover;
+      object-fit: cover;
+      -o-object-position: 0 0;
+      object-position: 0 0;
+    }
+
+    .entry-content {
+      padding: 24px;
+    }
+  }
+
+  .highlighted-article {
+    box-shadow: 0 2px 12px 0 darken($shadow-2, 20%);
+    &:hover {
+      box-shadow: 0 8px 10px 0 darken($shadow-2, 20%);
+    }
+
+    .entry-image img {
+      width: 100%;
+      height: 300px;
+      -o-object-fit: cover;
+      object-fit: cover;
+      -o-object-position: 50% 50%;
+      object-position: 50% 50%;
+    }
+
+    time {
+      right: 23px;
+    }
+
+    .entry-content {
+      padding: 24px 39px !important;
+    }
+
+    @media (min-width: $grid-breakpoint-md) {
+      .entry-title {
+        font-size: 28px;
+      }
+
+      .entry-content {
+        padding: 24px 40px 24px 15px !important;
+      }
+
+      .entry-image {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+}

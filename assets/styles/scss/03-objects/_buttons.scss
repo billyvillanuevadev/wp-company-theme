@@ -1,0 +1,16 @@
+/*-----------------------------------------
+# Buttons
+-----------------------------------------*/
+.btn {
+  border-radius: 0 !important;
+}
+
+.btn-outline-info {
+  color: $blue-lighter;
+  border-color: $blue-lighter;
+}
+
+.btn-md {
+  padding: 10px 30px;
+  font-size: 1em;
+}

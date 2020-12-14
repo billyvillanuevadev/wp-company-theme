@@ -1,0 +1,46 @@
+/*-----------------------------------------
+# Utils
+-----------------------------------------*/
+.img-bg {
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.img-crop-circle {
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.vcenter-container {
+  position: relative;
+  height: 100%;
+
+  .vcenter-content {
+    &.vcenter-mobile-off {
+      position: relative;
+      
+      @media (min-width: $grid-breakpoint-md) {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+.sticky-header {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  top: 0;
+
+  & + div {
+    margin-top: $header-height;
+  }
+}
