@@ -20,3 +20,5 @@ function xbv_remove_default_post_type() {
   // remove_menu_page('edit.php?post_type=acf-field-group');
 }
 add_action('admin_menu','xbv_remove_default_post_type');
+
+// Test
